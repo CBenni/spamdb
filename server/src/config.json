@@ -1,0 +1,14 @@
+{
+	"api": {
+		"port": 3000,
+		"permissions": {
+			"entries": {
+				"get": 0,
+				"put": 10
+			}
+		}
+	},
+	"db": {
+		"url": "mongodb://localhost/spamdb"
+	}
+}
