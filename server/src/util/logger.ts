@@ -1,4 +1,4 @@
-import pino from 'pino';
+import * as pino from 'pino';
 
 const logger = pino({
   name: 'spamdb',
@@ -19,4 +19,14 @@ if (process.env.NODE_ENV === 'test') {
   logger.level = 'silent';
 }
 
-export default logger;
+export function info(...args: any[]): any {
+  return logger.info(...args);
+}
+
+export function error(...args: any[]): any {
+  return logger.error(...args);
+}
+
+export function debug(...args: any[]): any {
+  return logger.debug(...args);
+}

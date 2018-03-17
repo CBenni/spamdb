@@ -3,9 +3,16 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/index.ts"
+    "dev": "nodemon --watch 'src/**/*' -e ts,tsx --exec 'ts-node' ./src/index.ts",
+    "generate:routes:v1": "tsoa routes -c src/api/v1/tsoa.json",
+    "generate:swagger:v1": "tsoa swagger -c src/api/v1/tsoa.json",
+    "generate:routes": "npm run generate:routes:v1",
+    "generate:swagger": "npm run generate:swagger:v1",
+    "generate:all": "npm run generate:routes && npm run generate:swagger",
+    "generate": "npm run generate:all"
   },
   "dependencies": {
+    "dotenv": "^5.0.1",
     "got": "^8.3.0",
     "koa": "^2.5.0",
     "koa-router": "^7.4.0",
@@ -13,6 +20,7 @@
     "mongoose": "^5.0.10",
     "pino": "^4.13.0",
     "socket.io": "^2.0.4",
+    "tsoa": "^2.1.4",
     "typegoose": "^4.0.1",
     "uuid": "^3.2.1",
     "uws": "^9.14.0"

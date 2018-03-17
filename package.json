@@ -5,7 +5,8 @@
     "koa-json": "^2.0.2",
     "koa-mount": "^3.0.0",
     "koa-send": "^4.1.3",
-    "koa2-swagger-ui": "^2.7.0"
+    "koa2-swagger-ui": "^2.7.0",
+    "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
     "@types/koa-json": "^2.0.18",

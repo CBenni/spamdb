@@ -1,0 +1,12 @@
+{
+  "apps": [{
+    "name": "spamdb-server",
+    "autorestart": true,
+    "watch": ["./dist/**/*.js"],
+    "script": "./dist/api.js",
+    "watch_options": {
+      "awaitWriteFinish": true,
+      "usePolling": true
+    }
+  }]
+}

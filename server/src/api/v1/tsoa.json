@@ -1,0 +1,26 @@
+{
+  "swagger": {
+    "outputDirectory": "./dist/api/v1",
+    "entryFile": "./src/api/v1/index.ts",
+    "host": "",
+    "version": "1.0",
+    "name": "SpamDB API",
+    "description": "Version 1 of SpamDB.",
+    "license": "None",
+    "basePath": "/api/v1",
+    "securityDefinitions": {
+      "jwtAuthHeader": {
+        "type": "apiKey",
+        "name": "Authentication",
+        "in": "header"
+      }
+    }
+  },
+  "routes": {
+    "entryFile": "./src/api/v1/index",
+    "routesDir": "./src/api/v1",
+    "basePath": "",
+    "middleware": "koa",
+    "authenticationModule": "./src/api/v1/middlewares/auth.ts"
+  }
+}
